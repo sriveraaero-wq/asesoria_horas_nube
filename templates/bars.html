@@ -1,0 +1,12 @@
+{% if bars %}
+  <div class="bars">
+  {% for item in bars %}
+    <div class="bar-row">
+      <div class="bar-head"><span>{{ loop.index }}. {{ item.name }}</span><b>{{ "%.1f"|format(item.hours) }} h</b></div>
+      <div class="bar-track"><div class="bar-fill" style="width: {{ item.pct }}%"></div></div>
+    </div>
+  {% endfor %}
+  </div>
+{% else %}
+  <div class="empty">Sin registros para mostrar.</div>
+{% endif %}
