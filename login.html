@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Ingreso · Asesoría Horas{% endblock %}
+{% block content %}
+<section class="login-card">
+  <div class="login-icon">◷</div>
+  <h1>Asesoría Horas Equipo</h1>
+  <p>Ingreso multiusuario con administrador central.</p>
+
+  <form method="post" class="form-grid one">
+    <div>
+      <label>Usuario</label>
+      <input name="username" autocomplete="username" required placeholder="admin">
+    </div>
+    <div>
+      <label>Contraseña</label>
+      <input name="password" type="password" autocomplete="current-password" required placeholder="admin123">
+    </div>
+    <button class="primary-btn" type="submit">Ingresar</button>
+  </form>
+
+  <div class="login-help">
+    <strong>Demo inicial:</strong><br>
+    Administrador: <code>admin</code> / <code>admin123</code><br>
+    Usuario prueba: <code>consultor</code> / <code>123456</code>
+  </div>
+</section>
+{% endblock %}

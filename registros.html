@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="section-title"><div><h2>Historial</h2><p>Se muestran los últimos 4 registros. Selecciona uno para ver el detalle.</p></div><a class="primary-btn" href="{{ url_for('nuevo') }}">＋ Nuevo registro</a></section>
+<section class="history-list">
+  {% if records %}
+    {% for r in records %}
+    <a class="record-item" href="{{ url_for('detalle', record_id=r.id) }}"><div><h3>{{ r.proyecto }}</h3><p>{{ r.empresa }} · {{ r.fecha }} · {{ "%.1f"|format(r.horas) }} h · {{ r.consultor }}</p></div><strong>›</strong></a>
+    {% endfor %}
+  {% else %}<div class="empty">Aún no hay registros.</div>{% endif %}
+</section>
+{% endblock %}
