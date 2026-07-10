@@ -1,0 +1,11 @@
+{
+  "name": "Asesoría Horas Equipo",
+  "short_name": "Asesoría Horas",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#09a9e8",
+  "icons": [
+    {"src": "/static/icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable"}
+  ]
+}
