@@ -104,3 +104,14 @@ Esta versión incluye una portada pública más trabajada visualmente:
 - Tarjetas de beneficios.
 - Pie visual con referencia a redes.
 - Flujo: / inicio público, /login ingreso, /panel dashboard interno.
+
+MEJORA ADMIN / CELULAR
+----------------------
+
+Cambios incorporados:
+
+- El dashboard queda reservado solo para el usuario administrador.
+- Los usuarios normales ingresan directamente a "Nuevo registro".
+- La navegación de usuarios normales ya no muestra "Panel".
+- La pantalla de inicio ya no incluye la sección "Por qué usar esta app".
+- Se ajustó la vista móvil para una experiencia más limpia en celular.

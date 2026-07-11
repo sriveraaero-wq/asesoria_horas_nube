@@ -163,7 +163,7 @@ def admin_required(view):
             return redirect(url_for("login"))
         if g.user.role != "admin":
             flash("Esta opción es solo para el administrador.", "error")
-            return redirect(url_for("panel"))
+            return redirect(url_for("panel" if user.role == "admin" else "nuevo"))
         return view(*args, **kwargs)
     return wrapped_view
 
@@ -285,6 +285,8 @@ def inicio():
 @app.route("/panel")
 @login_required
 def panel():
+    if g.user.role != "admin":
+        return redirect(url_for("nuevo"))
     filt = filters_context()
     records = fetch_records(filt)
     dashboard = calc_dashboard(records, filt["group_by"])
