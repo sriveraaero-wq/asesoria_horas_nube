@@ -261,3 +261,142 @@
     height: 38px;
   }
 }
+
+
+/* Mejora: dashboard solo administrador y vista móvil más limpia */
+.user-home-card {
+  max-width: 720px;
+  margin: 20px auto 0;
+  text-align: center;
+}
+
+.landing-page {
+  max-width: 980px;
+  margin: -22px auto 0;
+}
+
+.landing-hero-pro {
+  border-radius: 28px;
+  min-height: 520px;
+}
+
+.landing-hero-shade {
+  min-height: 520px;
+  padding-bottom: 54px;
+}
+
+@media (max-width: 980px) {
+  .bottom-nav {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .landing-page {
+    margin: -16px auto 0;
+  }
+
+  .landing-hero-pro,
+  .landing-hero-shade {
+    min-height: calc(100vh - 140px);
+    border-radius: 22px;
+  }
+
+  .landing-copy-pro h1 {
+    font-size: clamp(2.15rem, 9vw, 3.15rem);
+  }
+
+  .landing-copy-pro p {
+    max-width: 92%;
+  }
+
+  .form-card,
+  .detail-card,
+  .card {
+    padding: 16px;
+  }
+
+  .record-item {
+    padding: 14px;
+  }
+}
+
+@media (max-width: 620px) {
+  body {
+    background: #f6fbff;
+  }
+
+  .topbar {
+    padding: 12px 14px;
+  }
+
+  .brand-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+  }
+
+  .app-shell {
+    margin: 10px 8px 90px;
+    padding: 14px;
+    border-radius: 20px;
+  }
+
+  .landing-hero-pro,
+  .landing-hero-shade {
+    min-height: calc(100vh - 118px);
+  }
+
+  .landing-hero-shade {
+    padding: 34px 16px;
+  }
+
+  .landing-kicker {
+    font-size: .82rem !important;
+    padding: 6px 12px;
+  }
+
+  .landing-copy-pro h1 {
+    font-size: 2.45rem;
+    line-height: 1.02;
+  }
+
+  .landing-copy-pro p {
+    font-size: 1rem;
+    line-height: 1.42;
+  }
+
+  .landing-btn {
+    width: min(100%, 260px);
+    min-height: 48px;
+    border-radius: 14px;
+  }
+
+  .action-card {
+    min-height: 92px;
+  }
+
+  .section-title h2 {
+    font-size: 1.45rem;
+  }
+
+  input,
+  select,
+  textarea {
+    min-height: 46px;
+    font-size: 16px;
+  }
+
+  .primary-btn,
+  .ghost-btn,
+  .danger-btn {
+    min-height: 44px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .form-actions a,
+  .form-actions button {
+    width: 100%;
+  }
+}
