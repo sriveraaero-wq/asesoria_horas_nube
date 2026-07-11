@@ -20,7 +20,9 @@
       </div>
     </div>
     <nav class="desktop-nav">
+      {% if g.user.role == "admin" %}
       <a class="{{ 'active' if request.endpoint == 'panel' else '' }}" href="{{ url_for('panel') }}">Panel</a>
+      {% endif %}
       <a class="{{ 'active' if request.endpoint == 'nuevo' else '' }}" href="{{ url_for('nuevo') }}">Nuevo</a>
       <a class="{{ 'active' if request.endpoint == 'registros' else '' }}" href="{{ url_for('registros') }}">Registros</a>
       <a class="{{ 'active' if request.endpoint == 'datos' else '' }}" href="{{ url_for('datos') }}">Datos</a>
@@ -48,7 +50,9 @@
 
   {% if g.user %}
   <nav class="bottom-nav">
+    {% if g.user.role == "admin" %}
     <a class="{{ 'active' if request.endpoint == 'panel' else '' }}" href="{{ url_for('panel') }}">⌂<span>Panel</span></a>
+    {% endif %}
     <a class="{{ 'active' if request.endpoint == 'nuevo' else '' }}" href="{{ url_for('nuevo') }}">＋<span>Nuevo</span></a>
     <a class="{{ 'active' if request.endpoint == 'registros' else '' }}" href="{{ url_for('registros') }}">▣<span>Registros</span></a>
     <a class="{{ 'active' if request.endpoint == 'datos' else '' }}" href="{{ url_for('datos') }}">▤<span>Datos</span></a>
