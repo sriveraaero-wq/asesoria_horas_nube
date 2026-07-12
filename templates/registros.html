@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-<section class="section-title"><div><h2>Historial</h2><p>Se muestran los últimos 4 registros. Selecciona uno para ver el detalle.</p></div><a class="primary-btn" href="{{ url_for('nuevo') }}">＋ Nuevo registro</a></section>
+<section class="section-title"><div><h2>Historial</h2><p>{% if g.user.role == "admin" %}Se muestran los últimos 4 registros del equipo. Selecciona uno para ver el detalle.{% else %}Se muestran tus últimos 4 registros. Selecciona uno para ver el detalle.{% endif %}</p></div><a class="primary-btn" href="{{ url_for('nuevo') }}">＋ Nuevo registro</a></section>
 <section class="history-list">
   {% if records %}
     {% for r in records %}

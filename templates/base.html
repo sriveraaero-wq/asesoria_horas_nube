@@ -25,7 +25,9 @@
       {% endif %}
       <a class="{{ 'active' if request.endpoint == 'nuevo' else '' }}" href="{{ url_for('nuevo') }}">Nuevo</a>
       <a class="{{ 'active' if request.endpoint == 'registros' else '' }}" href="{{ url_for('registros') }}">Registros</a>
+      {% if g.user.role == "admin" %}
       <a class="{{ 'active' if request.endpoint == 'datos' else '' }}" href="{{ url_for('datos') }}">Datos</a>
+      {% endif %}
       {% if g.user.role == "admin" %}
       <a class="{{ 'active' if request.endpoint == 'admin_usuarios' else '' }}" href="{{ url_for('admin_usuarios') }}">Usuarios</a>
       {% endif %}
@@ -55,7 +57,9 @@
     {% endif %}
     <a class="{{ 'active' if request.endpoint == 'nuevo' else '' }}" href="{{ url_for('nuevo') }}">＋<span>Nuevo</span></a>
     <a class="{{ 'active' if request.endpoint == 'registros' else '' }}" href="{{ url_for('registros') }}">▣<span>Registros</span></a>
+    {% if g.user.role == "admin" %}
     <a class="{{ 'active' if request.endpoint == 'datos' else '' }}" href="{{ url_for('datos') }}">▤<span>Datos</span></a>
+    {% endif %}
     {% if g.user.role == "admin" %}
     <a class="{{ 'active' if request.endpoint == 'admin_usuarios' else '' }}" href="{{ url_for('admin_usuarios') }}">♙<span>Usuarios</span></a>
     {% endif %}
