@@ -360,7 +360,7 @@ def detalle(record_id):
 
 
 @app.route("/datos")
-@login_required
+@admin_required
 def datos():
     filt = filters_context()
     records = fetch_records(filt)
@@ -368,7 +368,7 @@ def datos():
 
 
 @app.route("/exportar/excel")
-@login_required
+@admin_required
 def exportar_excel():
     filt = filters_context()
     records = fetch_records(filt)
@@ -384,7 +384,7 @@ def exportar_excel():
 
 
 @app.route("/exportar/csv")
-@login_required
+@admin_required
 def exportar_csv():
     filt = filters_context()
     records = fetch_records(filt)

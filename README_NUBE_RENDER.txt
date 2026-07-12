@@ -115,3 +115,13 @@ Cambios incorporados:
 - La navegación de usuarios normales ya no muestra "Panel".
 - La pantalla de inicio ya no incluye la sección "Por qué usar esta app".
 - Se ajustó la vista móvil para una experiencia más limpia en celular.
+
+ACTUALIZACION CONSULTOR / HISTORIAL
+-----------------------------------
+
+Cambios incorporados:
+
+- Los usuarios consultores ya no ven la opción "Datos" / "Hoja de datos".
+- La ruta /datos y las exportaciones quedan reservadas para administrador.
+- El historial del consultor se mantiene limitado a sus propios registros.
+- El historial del administrador conserva vista de los últimos registros del equipo.
